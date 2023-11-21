@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2023 a las 23:21:46
+-- Tiempo de generación: 21-11-2023 a las 20:50:48
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -42,15 +42,15 @@ CREATE TABLE `api_especies` (
 --
 
 INSERT INTO `api_especies` (`id`, `nombre`, `clasificacion`, `designacion`, `altura_promedio`, `esperanza_vida`, `idioma`) VALUES
-(1, 'human', 'mammal', 'sentient', '180.00', 120, 'Galactic Basic'),
-(2, 'Wookie', 'mammal', 'sentient', '2.10', 400, 'Shyriiwook'),
-(3, 'Rodian', 'sentient', 'reptilian', '1.70', 0, 'Galatic Basic'),
-(4, 'Hutt', 'gastropod', 'sentient', '3.00', 1000, 'Huttese'),
-(5, 'Yoda\'s species', 'mammal', 'sentient', '6.60', 900, 'Galactic basic'),
-(6, 'Trandoshan', 'reptile', 'sentient', '2.00', 0, 'Dosh'),
-(7, 'Mon Calamari', 'amphibian', 'sentient', '1.60', 0, 'Mon Calamarian'),
-(8, 'Ewok', 'mammal', 'sentient', '1.00', 0, 'Ewokese'),
-(9, 'Sullustan', 'mammal', 'sentient', '1.80', 0, 'Sullutese');
+(1, 'human', 'mamifero', 'sensible', '1.80', 120, 'Básico Galáctico'),
+(2, 'Wookie', 'mamifero', 'sensible', '2.10', 400, 'Shyriiwook'),
+(3, 'Rodian', 'sensible', 'reptil', '1.70', 0, 'Básico Galáctico'),
+(4, 'Hutt', 'Gasterópodos', 'sensible', '3.00', 1000, 'Huttese'),
+(5, 'Yoda\'s species', 'mamifero', 'sensible', '6.60', 900, 'Básico Galáctico'),
+(6, 'Trandoshan', 'reptil', 'sensible', '2.00', 0, 'Dosh'),
+(7, 'Mon Calamari', 'anfibio', 'sensible', '1.60', 0, 'Mon Calamarian'),
+(8, 'Ewok', 'mamifero', 'sensible', '1.00', 0, 'Ewokese'),
+(9, 'Sullustan', 'mamifero', 'sensible', '1.80', 0, 'Sullutesa');
 
 -- --------------------------------------------------------
 
@@ -75,8 +75,7 @@ INSERT INTO `api_peliculas` (`id`, `titulo`, `director`, `lanzamiento`) VALUES
 (3, 'Return of the Jedi', 'Richard Marquand', '1983-05-25'),
 (4, 'The Phantom Menace', 'George Lucas', '1999-05-19'),
 (5, 'Attack of the Clones', 'George Lucas', '2005-05-16'),
-(6, 'Revenge of the Sith', 'George Lucas', '2005-05-19'),
-(7, 'Revenge of the Sith', 'George Lucas', '2005-05-19');
+(6, 'Revenge of the Sith', 'George Lucas', '2005-05-19');
 
 -- --------------------------------------------------------
 
@@ -97,16 +96,18 @@ CREATE TABLE `api_personajes` (
 --
 
 INSERT INTO `api_personajes` (`id`, `nombre`, `especie`, `altura`, `peso`) VALUES
-(1, 'Luke Skywalker', '', '172.00', '77.00'),
-(2, 'Luke Skywalker', '', '172.00', '77.00'),
-(3, 'C-3PO', 'Droid', '167.00', '75.00'),
-(4, 'R2-D2', 'Droid', '96.00', '32.00'),
-(5, 'Darth Vader', '', '202.00', '136.00'),
-(6, 'Leia Organa', '', '150.00', '49.00'),
+(1, 'Luke Skywalker', '', '1.72', '77.00'),
+(2, 'Darth Vader', '', '2.02', '136.00'),
+(3, 'C-3PO', 'Droid', '1.67', '75.00'),
+(4, 'R2-D2', 'Droid', '9.60', '32.00'),
+(5, 'Darth Vader', '', '2.02', '136.00'),
+(6, 'Leia Organa', '', '1.50', '49.00'),
 (7, 'Owen Lars', '', '1.78', '120.00'),
 (8, 'Beru Whitesun lars', '', '1.65', '75.00'),
-(9, 'R5-D4', 'Droid', '97.00', '32.00'),
-(10, 'Biggs Darklighter', '', '1.83', '84.00');
+(9, 'R5-D4', 'Droid', '9.70', '32.00'),
+(10, 'Biggs Darklighter', '', '1.83', '84.00'),
+(11, 'Anakin Skywalker', '', '1.88', '84.00'),
+(13, 'Chewbacca', 'Wookie', '2.28', '112.00');
 
 -- --------------------------------------------------------
 
@@ -481,7 +482,7 @@ ALTER TABLE `api_peliculas`
 -- AUTO_INCREMENT de la tabla `api_personajes`
 --
 ALTER TABLE `api_personajes`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `api_planetas`
